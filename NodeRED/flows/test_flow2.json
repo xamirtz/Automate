@@ -1,0 +1,261 @@
+[
+    {
+        "id": "930439c0.bc4528",
+        "type": "tab",
+        "label": "flow.main",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "d592b331.09d6e",
+        "type": "mqtt out",
+        "z": "930439c0.bc4528",
+        "name": "auto/ac@AC-pin",
+        "topic": "'auto/ac'",
+        "qos": "1",
+        "retain": "false",
+        "broker": "8ebb2cac.09bf4",
+        "x": 460,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e0c038c0.a8a5d8",
+        "type": "debug",
+        "z": "930439c0.bc4528",
+        "name": "firebase.out@/devices/1/status/",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 510,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e847b750.28ff98",
+        "type": "firebase.on",
+        "z": "930439c0.bc4528",
+        "name": "firebase.out@/devices/1/status/",
+        "firebaseconfig": "",
+        "childpath": "/devices/1/status",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "e0c038c0.a8a5d8",
+                "d592b331.09d6e"
+            ]
+        ]
+    },
+    {
+        "id": "1cef245f.1a676c",
+        "type": "mqtt out",
+        "z": "930439c0.bc4528",
+        "name": "auto/tubelight@Tubelight-pin",
+        "topic": "'auto/tubelight'",
+        "qos": "1",
+        "retain": "false",
+        "broker": "8ebb2cac.09bf4",
+        "x": 500,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "62e46f5f.52f2d",
+        "type": "debug",
+        "z": "930439c0.bc4528",
+        "name": "firebase.out@/devices/2/status/",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 510,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "428c3e79.cc088",
+        "type": "firebase.on",
+        "z": "930439c0.bc4528",
+        "name": "firebase.out@/devices/2/status/",
+        "firebaseconfig": "",
+        "childpath": "/devices/2/status",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "62e46f5f.52f2d",
+                "1cef245f.1a676c"
+            ]
+        ]
+    },
+    {
+        "id": "63857981.de1ea8",
+        "type": "mqtt out",
+        "z": "930439c0.bc4528",
+        "name": "auto/led@LED-pin",
+        "topic": "'auto/led'",
+        "qos": "1",
+        "retain": "false",
+        "broker": "8ebb2cac.09bf4",
+        "x": 470,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "d38b5b39.5e2fe8",
+        "type": "debug",
+        "z": "930439c0.bc4528",
+        "name": "firebase.out@/devices/0/status/",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 510,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ebf33cb8.0e993",
+        "type": "firebase.on",
+        "z": "930439c0.bc4528",
+        "name": "firebase.out@/devices/0/status/",
+        "firebaseconfig": "",
+        "childpath": "/devices/0/status",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "d38b5b39.5e2fe8",
+                "63857981.de1ea8"
+            ]
+        ]
+    },
+    {
+        "id": "e0e5e24d.cdf7c",
+        "type": "mqtt out",
+        "z": "930439c0.bc4528",
+        "name": "auto/heater@Heater-pin",
+        "topic": "'auto/heater'",
+        "qos": "1",
+        "retain": "false",
+        "broker": "8ebb2cac.09bf4",
+        "x": 490,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "6e807ae8.92d244",
+        "type": "debug",
+        "z": "930439c0.bc4528",
+        "name": "firebase.out@/devices/3/status/",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 510,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "a399345c.563e68",
+        "type": "firebase.on",
+        "z": "930439c0.bc4528",
+        "name": "firebase.out@/devices/3/status/",
+        "firebaseconfig": "",
+        "childpath": "/devices/3/status",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 170,
+        "y": 500,
+        "wires": [
+            [
+                "6e807ae8.92d244",
+                "e0e5e24d.cdf7c"
+            ]
+        ]
+    },
+    {
+        "id": "73ee2df1.663d24",
+        "type": "mqtt out",
+        "z": "930439c0.bc4528",
+        "name": "auto/fan@Fan-pin",
+        "topic": "'auto/fan'",
+        "qos": "1",
+        "retain": "false",
+        "broker": "8ebb2cac.09bf4",
+        "x": 470,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "d1104f15.f6fd4",
+        "type": "debug",
+        "z": "930439c0.bc4528",
+        "name": "firebase.out@/devices/4/status/",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "x": 510,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "fcc302bc.7d9f2",
+        "type": "firebase.on",
+        "z": "930439c0.bc4528",
+        "name": "firebase.out@/devices/4/status/",
+        "firebaseconfig": "",
+        "childpath": "/devices/4/status",
+        "atStart": true,
+        "eventType": "value",
+        "queries": [],
+        "x": 170,
+        "y": 640,
+        "wires": [
+            [
+                "d1104f15.f6fd4",
+                "73ee2df1.663d24"
+            ]
+        ]
+    },
+    {
+        "id": "8ebb2cac.09bf4",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "test-client",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]
